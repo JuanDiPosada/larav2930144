@@ -6,6 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <p>hola</p>
+    <h2>las rutas son:</h2>
+    <ul>
+        <li>cuadratica/{a}/{b}/{c}</li>
+        <li>amigos/{a}/{b}</li>
+    </ul>
+    
 </body>
 </html>
