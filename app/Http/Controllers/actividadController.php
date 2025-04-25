@@ -11,22 +11,20 @@ class actividadController extends Controller
         $discriminante=($b*$b)-(4*$a*$c);
         if ($a==0) {
             $texto="no es una ecuacion cuadratica";
-            return view('resultadosCuadratica',compact('texto'));
         }elseif ($discriminante>0) {
             $resultado1=(((-$b)+sqrt($discriminante))/($a*2));
             $resultado2=(((-$b)-sqrt($discriminante))/($a*2));
             $texto="al ser el discriminante mayor a 0 ($discriminante), se hace la doble solucion, usando (+): x1=$resultado1, usando (-): x2=$resultado2";
-            return view('resultadosCuadratica',compact('texto'));
         }elseif($discriminante==0){
             $resultado=-$b/($a*2);
             $texto="al ser el discriminante igual a 0 ($discriminante), se hace una unica solucion = $resultado";
-            return view('resultadosCuadratica',compact('texto'));
         }else{
             $real = -$b / (2 * $a);
             $imaginaria = sqrt(abs($discriminante)) / (2 * $a);
-            $texto = "al ser el discriminante menor a 0 ($discriminante), las soluciones son complejas: x1=$real + $imaginaria i /// y /// x2=$real - $imaginaria i";
-            return view('resultadosCuadratica', compact('texto'));
+            $texto = "al ser el discriminante menor a 0 ($discriminante), las soluciones son : x1=$real + $imaginaria i /// y /// x2=$real - $imaginaria i";
         }
+        return view('resultadosCuadratica',compact('texto'));
+
     }
 
 
