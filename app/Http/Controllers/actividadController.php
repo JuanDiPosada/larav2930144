@@ -27,7 +27,7 @@ class actividadController extends Controller
 
     }
 
-
+    //cambios aca en mejora
     public function amigos($n1, $n2) {
         $suma1 = 0;
         $suma2 = 0;
